@@ -1,5 +1,7 @@
-export const Logo = () => {
-  return (
+import { Text } from "../Text/Text";
+
+export const Logo = {
+  Svg: () => (
     <svg
       width={119}
       height={82}
@@ -16,5 +18,15 @@ export const Logo = () => {
         fill="#39F"
       />
     </svg>
-  );
+  ),
+  Text: () => (
+    <Text size="m">
+      Ótica Girêh{" "}
+      <span
+        style={{ fontSize: "var(--font-size-s)", color: "var(--main-color)" }}
+      >
+        Caju
+      </span>
+    </Text>
+  ),
 };

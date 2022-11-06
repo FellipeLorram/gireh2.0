@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
+import { Topbar } from "../../Components/Topbar/Topbar";
 import { PageWrapperContainer } from "./PageWrapper.styled";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 export const PageWrapper = ({ children }: Props) => {
   return (
     <PageWrapperContainer>
+      <Topbar />
       <Navbar />
     </PageWrapperContainer>
   );

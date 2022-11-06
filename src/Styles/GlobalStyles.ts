@@ -34,5 +34,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     background: var(--gray-600);
     height: 100%;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--gray-400)
+    }
   }
 `;
