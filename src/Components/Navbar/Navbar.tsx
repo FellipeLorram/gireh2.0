@@ -13,42 +13,45 @@ interface Props {
 
 type NavbarItems = {
   Icon: (props: SVGAttributes<SVGSVGElement>) => JSX.Element;
-  Action: () => void;
+  path: string;
   iconText: string;
 };
 
 const NavbarItems: NavbarItems[] = [
   {
     Icon: Files,
-    Action: () => console.log(""),
+    path: "/",
     iconText: "Vendas",
   },
   {
     Icon: ReportMedical,
-    Action: () => console.log(""),
+    path: "/",
     iconText: "Consultas",
   },
   {
     Icon: People,
-    Action: () => console.log(""),
+    path: "/",
     iconText: "Clientes",
-  },
-  {
-    Icon: Dots,
-    Action: () => console.log(""),
-    iconText: "Mais",
   },
 ];
 
 export const Navbar = () => {
   return (
     <NavbarContainer>
-      {NavbarItems.map(({ Icon, Action, iconText }) => (
-        <NavbarIcon onClick={() => Action()}>
+      {NavbarItems.map(({ Icon, path, iconText }) => (
+        <NavbarIcon onClick={() => console.log(path)}>
           <Icon />
-          <Text className="NavbarIcon__text" size="s">{iconText}</Text>
+          <Text className="NavbarIcon__text" size="s">
+            {iconText}
+          </Text>
         </NavbarIcon>
       ))}
+      <NavbarIcon>
+        <Dots />
+        <Text className="NavbarIcon__text" size="s">
+          Mais
+        </Text>
+      </NavbarIcon>
     </NavbarContainer>
   );
 };
