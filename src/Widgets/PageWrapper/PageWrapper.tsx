@@ -1,5 +1,17 @@
 import React from "react";
+import { Navbar } from "../../Components/Navbar/Navbar";
+import { PageWrapperContainer } from "./PageWrapper.styled";
 
-export const PageWrapper = () => {
-  return <div>PageWrapper</div>;
+interface Props {
+  children: React.ReactNode;
+}
+
+const NavbarConstructor = [];
+
+export const PageWrapper = ({ children }: Props) => {
+  return (
+    <PageWrapperContainer>
+      <Navbar />
+    </PageWrapperContainer>
+  );
 };

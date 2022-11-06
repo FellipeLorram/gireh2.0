@@ -24,9 +24,15 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
+  
+  html {
+    height: 100vh;
+  }
+
   body {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
     background: var(--gray-600);
+    height: 100%;
   }
 `;

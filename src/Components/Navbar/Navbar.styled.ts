@@ -7,8 +7,15 @@ export const NavbarContainer = styled.div`
   width: 100%;
 `;
 
-export const NavbarIconContainer = styled.div`
-  display: grid;
-  place-items: center;
+export const NavbarIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
   padding: 10px;
+  svg {
+    stroke: var(--gray-100)
+  }
 `;
