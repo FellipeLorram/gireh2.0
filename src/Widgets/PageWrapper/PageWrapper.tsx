@@ -6,8 +6,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-const NavbarConstructor = [];
-
 export const PageWrapper = ({ children }: Props) => {
   return (
     <PageWrapperContainer>

@@ -46,7 +46,7 @@ export const Navbar = () => {
       {NavbarItems.map(({ Icon, Action, iconText }) => (
         <NavbarIcon onClick={() => Action()}>
           <Icon />
-          <Text size="s">{iconText}</Text>
+          <Text className="NavbarIcon__text" size="s">{iconText}</Text>
         </NavbarIcon>
       ))}
     </NavbarContainer>

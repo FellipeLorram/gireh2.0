@@ -4,10 +4,16 @@ export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   width: 100%;
+  background: var(--gray-700);
 `;
 
-export const NavbarIcon = styled.div`
+interface NavbarIconProps {
+  Active?: boolean;
+}
+
+export const NavbarIcon = styled.div<NavbarIconProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +21,12 @@ export const NavbarIcon = styled.div`
   gap: 5px;
   width: 100%;
   padding: 10px;
+
+  .NavbarIcon__text {
+    color: var(${({ Active }) => (Active ? "--gray-100" : "--gray-400")});
+  }
+
   svg {
-    stroke: var(--gray-100)
+    stroke: var(${({ Active }) => (Active ? "--gray-100" : "--gray-400")});
   }
 `;
