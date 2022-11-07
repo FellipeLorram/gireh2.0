@@ -7,7 +7,7 @@ export const Menu = () => {
   return (
     <MenuWrapper>
       <div className="header">
-        <Logo.Text />
+        <Logo.Svg />
       </div>
 
       <div className="body">

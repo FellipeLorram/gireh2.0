@@ -7,6 +7,12 @@ export const MenuWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+
+
   .header {
     padding: 20px;
     text-align: center;

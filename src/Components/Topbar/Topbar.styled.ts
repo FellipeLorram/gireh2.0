@@ -8,5 +8,9 @@ export const TopbarContainer = styled.div`
   padding: 10px 20px;
   width: 100%;
   background: var(--gray-700);
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 `;
 

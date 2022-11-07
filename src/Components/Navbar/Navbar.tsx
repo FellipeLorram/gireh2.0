@@ -1,4 +1,4 @@
-import { ReactNode, SVGAttributes } from "react";
+import { SVGAttributes } from "react";
 import { Dots } from "../../Assets/Svgs/Icons/Dots";
 import { Files } from "../../Assets/Svgs/Icons/Files";
 import { People } from "../../Assets/Svgs/Icons/People";
@@ -7,9 +7,7 @@ import { Text } from "../Text/Text";
 
 import { NavbarContainer, NavbarIcon } from "./Navbar.styled";
 
-interface Props {
-  children: ReactNode;
-}
+import { useOpenMenu } from "../../Store/MenuContext";
 
 type NavbarItems = {
   Icon: (props: SVGAttributes<SVGSVGElement>) => JSX.Element;
@@ -20,17 +18,17 @@ type NavbarItems = {
 const NavbarItems: NavbarItems[] = [
   {
     Icon: Files,
-    path: "/",
+    path: "/sells",
     iconText: "Vendas",
   },
   {
     Icon: ReportMedical,
-    path: "/",
+    path: "/appointments",
     iconText: "Consultas",
   },
   {
     Icon: People,
-    path: "/",
+    path: "/customers",
     iconText: "Clientes",
   },
 ];
@@ -39,14 +37,14 @@ export const Navbar = () => {
   return (
     <NavbarContainer>
       {NavbarItems.map(({ Icon, path, iconText }) => (
-        <NavbarIcon onClick={() => console.log(path)}>
+        <NavbarIcon key={path} onClick={() => console.log(path)}>
           <Icon />
           <Text className="NavbarIcon__text" size="s">
             {iconText}
           </Text>
         </NavbarIcon>
       ))}
-      <NavbarIcon>
+      <NavbarIcon onClick={() => useOpenMenu()}>
         <Dots />
         <Text className="NavbarIcon__text" size="s">
           Mais

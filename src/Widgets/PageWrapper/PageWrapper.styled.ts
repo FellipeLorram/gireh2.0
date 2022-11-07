@@ -7,8 +7,10 @@ export const PageWrapperContainer = styled.section`
   justify-content: space-between;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
 
-  svg {
+  .icon {
     width: 24px;
     height: 24px;
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Menu } from "../../Components/Menu/Menu";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { Topbar } from "../../Components/Topbar/Topbar";
 import { PageWrapperContainer } from "./PageWrapper.styled";
@@ -11,11 +12,9 @@ export const PageWrapper = ({ children }: Props) => {
   return (
     <PageWrapperContainer>
       <Topbar />
-      <main>
-        
-        {children}
-      </main>
+      <main>{children}</main>
       <Navbar />
+      <Menu />
     </PageWrapperContainer>
   );
 };

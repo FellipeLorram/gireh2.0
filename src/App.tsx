@@ -1,11 +1,13 @@
-import { Menu } from "./Components/Menu/Menu";
 import { GlobalStyles } from "./Styles/GlobalStyles";
+import { PageWrapper } from "./Widgets/PageWrapper/PageWrapper";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Menu />
+      <PageWrapper>
+        teste
+      </PageWrapper>
     </>
   );
 }
