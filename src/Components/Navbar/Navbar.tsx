@@ -1,4 +1,4 @@
-import { SVGAttributes } from "react";
+import { memo, SVGAttributes } from "react";
 import { Dots } from "../../Assets/Svgs/Icons/Dots";
 import { Files } from "../../Assets/Svgs/Icons/Files";
 import { People } from "../../Assets/Svgs/Icons/People";
@@ -7,7 +7,9 @@ import { Text } from "../Text/Text";
 
 import { NavbarContainer, NavbarIcon } from "./Navbar.styled";
 
-import { useStore } from "../../Store/MenuContext";
+import { useMenuContextStore } from "../../Store/MenuContext";
+
+const { useStore } = useMenuContextStore;
 
 type NavbarItems = {
   Icon: (props: SVGAttributes<SVGSVGElement>) => JSX.Element;
@@ -33,8 +35,8 @@ const NavbarItems: NavbarItems[] = [
   },
 ];
 
-export const Navbar = () => {
-  const { openMenu } = useStore();
+export const Navbar = memo(() => {
+  const [, setOpen] = useStore((state) => state.open);
 
   return (
     <NavbarContainer>
@@ -46,7 +48,7 @@ export const Navbar = () => {
           </Text>
         </NavbarIcon>
       ))}
-      <NavbarIcon onClick={openMenu}>
+      <NavbarIcon onClick={() => setOpen({ open: true })}>
         <Dots />
         <Text className="NavbarIcon__text" size="s">
           Mais
@@ -54,4 +56,4 @@ export const Navbar = () => {
       </NavbarIcon>
     </NavbarContainer>
   );
-};
+});

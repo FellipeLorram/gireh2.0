@@ -7,14 +7,19 @@ import { PageWrapperContainer } from "./PageWrapper.styled";
 interface Props {
   children: React.ReactNode;
 }
+import { useMenuContextStore } from "../../Store/MenuContext";
+
+const { Provider } = useMenuContextStore;
 
 export const PageWrapper = ({ children }: Props) => {
   return (
-    <PageWrapperContainer>
-      <Topbar />
-      <main>{children}</main>
-      <Navbar />
-      <Menu />
-    </PageWrapperContainer>
+    <Provider>
+      <PageWrapperContainer>
+        <Topbar />
+        <main>{children}</main>
+        <Navbar />
+        <Menu />
+      </PageWrapperContainer>
+    </Provider>
   );
 };

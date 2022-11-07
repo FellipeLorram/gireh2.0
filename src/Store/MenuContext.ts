@@ -1,13 +1,7 @@
-import create from "zustand";
+import createFastContext from "./CreateFastContext";
 
-interface MenuContext {
-  open: boolean;
-  openMenu: () => void;
-  closeMenu: () => void;
-}
-
-export const useStore = create<MenuContext>((set) => ({
+export const useMenuContextStore = createFastContext({
   open: false,
-  openMenu: () => set(() => ({ open: true })),
-  closeMenu: () => set(() => ({ open: false })),
-}));
+});
+
+

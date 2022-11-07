@@ -1,12 +1,15 @@
+import { memo } from "react";
 import { ArrowLeftCircle } from "../../Assets/Svgs/Icons/ArrowLeftCircle";
 import { Logo } from "../Logo/Logo";
 import { Text } from "../Text/Text";
 import { MenuWrapper } from "./Menu.styled";
 
-import { useStore } from "../../Store/MenuContext";
+import { useMenuContextStore } from "../../Store/MenuContext";
 
-export const Menu = () => {
-  const { open, closeMenu } = useStore();
+const { useStore } = useMenuContextStore;
+
+export const Menu = memo(() => {
+  const [open, setOpen] = useStore((state) => state.open);
 
   return (
     <MenuWrapper menuOnScreen={open}>
@@ -24,8 +27,8 @@ export const Menu = () => {
       </div>
 
       <div className="footer">
-        <ArrowLeftCircle onClick={closeMenu} />
+        <ArrowLeftCircle onClick={() => setOpen({ open: false })} />
       </div>
     </MenuWrapper>
   );
-};
+});
