@@ -6,12 +6,8 @@ interface MenuContext {
   closeMenu: () => void;
 }
 
-const useStore = create<MenuContext>((set) => ({
+export const useStore = create<MenuContext>((set) => ({
   open: false,
-  openMenu: () => set(() => ({ open: false })),
-  closeMenu: () => set(() => ({ open: true })),
+  openMenu: () => set(() => ({ open: true })),
+  closeMenu: () => set(() => ({ open: false })),
 }));
-
-export const useMenu = useStore(({ open }) => open);
-export const useOpenMenu = useStore(({ openMenu }) => openMenu);
-export const useCloseMenu = useStore(({ closeMenu }) => closeMenu);

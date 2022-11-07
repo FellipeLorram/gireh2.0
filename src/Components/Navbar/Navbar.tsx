@@ -7,7 +7,7 @@ import { Text } from "../Text/Text";
 
 import { NavbarContainer, NavbarIcon } from "./Navbar.styled";
 
-import { useOpenMenu } from "../../Store/MenuContext";
+import { useStore } from "../../Store/MenuContext";
 
 type NavbarItems = {
   Icon: (props: SVGAttributes<SVGSVGElement>) => JSX.Element;
@@ -34,6 +34,8 @@ const NavbarItems: NavbarItems[] = [
 ];
 
 export const Navbar = () => {
+  const { openMenu } = useStore();
+
   return (
     <NavbarContainer>
       {NavbarItems.map(({ Icon, path, iconText }) => (
@@ -44,7 +46,7 @@ export const Navbar = () => {
           </Text>
         </NavbarIcon>
       ))}
-      <NavbarIcon onClick={() => useOpenMenu()}>
+      <NavbarIcon onClick={openMenu}>
         <Dots />
         <Text className="NavbarIcon__text" size="s">
           Mais

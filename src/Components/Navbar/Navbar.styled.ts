@@ -7,6 +7,8 @@ export const NavbarContainer = styled.div`
   flex-direction: row;
   width: 100%;
   background: var(--gray-700);
+  z-index: 1;
+
 `;
 
 interface NavbarIconProps {

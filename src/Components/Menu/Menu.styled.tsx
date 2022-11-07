@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
-export const MenuWrapper = styled.div`
+interface MenuWrapperProps {
+  menuOnScreen: boolean;
+}
+
+export const MenuWrapper = styled.div<MenuWrapperProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  background: var(--gray-700);
   width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
-  left: 100%;
-  z-index: 1;
-
+  left: ${({ menuOnScreen }) => (menuOnScreen ? 0 : "100%")};
+  z-index: 2;
+  transition: all .2s ease-in-out;
 
   .header {
     padding: 20px;
@@ -33,5 +38,9 @@ export const MenuWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px;
+
+    svg{
+      stroke: var(--gray-400);
+    }
   }
 `;

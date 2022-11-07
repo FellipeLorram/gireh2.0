@@ -3,9 +3,13 @@ import { Logo } from "../Logo/Logo";
 import { Text } from "../Text/Text";
 import { MenuWrapper } from "./Menu.styled";
 
+import { useStore } from "../../Store/MenuContext";
+
 export const Menu = () => {
+  const { open, closeMenu } = useStore();
+
   return (
-    <MenuWrapper>
+    <MenuWrapper menuOnScreen={open}>
       <div className="header">
         <Logo.Svg />
       </div>
@@ -20,7 +24,7 @@ export const Menu = () => {
       </div>
 
       <div className="footer">
-        <ArrowLeftCircle />
+        <ArrowLeftCircle onClick={closeMenu} />
       </div>
     </MenuWrapper>
   );
