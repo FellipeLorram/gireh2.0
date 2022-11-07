@@ -29,15 +29,20 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
   }
 
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   body {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
     background: var(--gray-600);
-    height: 100%;
+    height: 100vh;
 
     svg {
-      width: 24px;
-      height: 24px;
       stroke: var(--gray-400)
     }
   }

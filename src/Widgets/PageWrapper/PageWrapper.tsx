@@ -11,6 +11,10 @@ export const PageWrapper = ({ children }: Props) => {
   return (
     <PageWrapperContainer>
       <Topbar />
+      <main>
+        
+        {children}
+      </main>
       <Navbar />
     </PageWrapperContainer>
   );

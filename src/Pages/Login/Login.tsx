@@ -13,7 +13,7 @@ export const Login = () => {
   return (
     <LoginPageWrapper>
       <PageContainer>
-        <Logo />
+        <Logo.Svg />
         <Text className="text" type="auxiliar">
           Insira suas credenciais para fazer login no sistema
         </Text>

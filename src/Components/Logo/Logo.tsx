@@ -20,7 +20,7 @@ export const Logo = {
     </svg>
   ),
   Text: () => (
-    <Text size="m">
+    <Text size="l">
       Ótica Girêh{" "}
       <span
         style={{ fontSize: "var(--font-size-s)", color: "var(--main-color)" }}
