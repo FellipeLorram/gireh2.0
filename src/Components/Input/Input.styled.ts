@@ -44,7 +44,6 @@ export const InputIcon = styled.span<InputIconProps>`
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  padding-right: 10px;
   
   svg {
     width: var(--font-size-m);

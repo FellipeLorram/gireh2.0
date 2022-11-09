@@ -10,6 +10,15 @@ export const PageWrapperContainer = styled.section`
   overflow: hidden;
   position: relative;
 
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .icon {
     width: 24px;
     height: 24px;

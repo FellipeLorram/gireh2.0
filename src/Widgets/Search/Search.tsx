@@ -1,8 +1,9 @@
 import { Icons } from "../../Assets/Svgs/Icons/Index";
-import { Input } from "../Input/Input";
+import { Input } from "../../Components/Input/Input";
 import { SearchBarWrapper } from "./Search.styled";
 import { SearchType } from "./SearchType";
 import { useSearchContext } from "../../Store/SearchContext";
+import { SearchModal } from "./SearchModal";
 
 const { Provider } = useSearchContext;
 
@@ -18,6 +19,7 @@ export const Search = () => {
         </Input.Wrapper>
         <SearchType />
       </SearchBarWrapper>
+      <SearchModal />
     </Provider>
   );
 };

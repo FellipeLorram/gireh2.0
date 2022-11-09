@@ -8,6 +8,7 @@ import { Lock } from "./Lock";
 import { People } from "./People";
 import { ReportMedical } from "./ReportMedical";
 import { Search } from "./Search";
+import { Close } from "./Close";
 
 export const Icons = {
     Search,
@@ -20,4 +21,5 @@ export const Icons = {
     Eye,
     ArrowLeftCircle,
     Envelope,
+    Close
 }

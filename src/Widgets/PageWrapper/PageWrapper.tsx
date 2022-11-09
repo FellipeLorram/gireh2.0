@@ -8,6 +8,7 @@ interface Props {
   children: React.ReactNode;
 }
 import { useMenuContextStore } from "../../Store/MenuContext";
+import { Search } from "../Search/Search";
 
 const { Provider } = useMenuContextStore;
 
@@ -15,7 +16,10 @@ export const PageWrapper = ({ children }: Props) => {
   return (
     <Provider>
       <PageWrapperContainer>
-        <Topbar />
+        <header>
+          <Topbar />
+          <Search />
+        </header>
         <main>{children}</main>
         <Navbar />
         <Menu />
