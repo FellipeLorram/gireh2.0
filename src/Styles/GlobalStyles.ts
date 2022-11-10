@@ -13,10 +13,10 @@ export const GlobalStyles = createGlobalStyle`
 
     --font-main-color: #878792;
     
-    --font-size-s: 12px;
-    --font-size-xs: 14px;
-    --font-size-m: 16px;
-    --font-size-l: 20px;
+    --font-size-s: 16px;
+    --font-size-xs: 20px;
+    --font-size-m: 24px;
+    --font-size-l: 30px;
   }
   *{
     margin: 0;
@@ -45,6 +45,8 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
 
     svg {
+      width: var(--font-size-l) !important;
+      height: var(--font-size-l)!important;
       stroke: var(--gray-400)
     }
   }

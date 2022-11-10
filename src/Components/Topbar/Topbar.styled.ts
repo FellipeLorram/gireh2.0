@@ -18,11 +18,6 @@ export const TopbarContainer = styled.div`
     gap: 10px;
     position: relative;
   }
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
 `;
 
 export const DropDownBackground = styled.div`
@@ -33,7 +28,7 @@ export const DropDownBackground = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
   z-index: 6;
-  animation: FadeInBackground .2s ease-in-out;
+  animation: FadeInBackground 0.2s ease-in-out;
 `;
 
 export const DropDown = styled.div`
@@ -41,7 +36,7 @@ export const DropDown = styled.div`
   position: absolute;
   top: 30px;
   right: 0;
-  width: 150px;
+  width: 200px;
   background: var(--gray-700);
   border-radius: var(--radius);
 
@@ -49,10 +44,10 @@ export const DropDown = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  animation: NiceScale .2s ease-in-out;
+  padding: 10px 0;
+  animation: NiceScale 0.2s ease-in-out;
 
   .row {
-    padding: 10px;
+    padding: 16px;
   }
 `;
