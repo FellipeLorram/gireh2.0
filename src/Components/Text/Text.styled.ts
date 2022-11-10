@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export interface TextWrapperProps {
-  size?: 's' | 'm' | 'l';
+  size?: 's' | 'xs' | 'm' | 'l';
   type?: 'principal' | 'auxiliar';
 }
 

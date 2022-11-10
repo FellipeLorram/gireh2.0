@@ -16,16 +16,16 @@ Card_Default.args = {
   children: (
     <>
       <Card.Row>
-        <span>Nome</span>
-        <span>Fellipe</span>
+        <Card.Text>Nome</Card.Text>
+        <Card.Text>Fellipe</Card.Text>
       </Card.Row>
       <Card.Row>
-        <span>Nome</span>
-        <span>Fellipe</span>
+        <Card.Text>Nome</Card.Text>
+        <Card.Text>Fellipe</Card.Text>
       </Card.Row>
       <Card.Row>
-        <span>Nome</span>
-        <span>Fellipe</span>
+        <Card.Text>Nome</Card.Text>
+        <Card.Text>Fellipe</Card.Text>
       </Card.Row>
     </>
   ),

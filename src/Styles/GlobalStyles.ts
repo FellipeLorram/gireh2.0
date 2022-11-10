@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     --font-main-color: #878792;
     
     --font-size-s: 12px;
+    --font-size-xs: 14px;
     --font-size-m: 16px;
     --font-size-l: 20px;
   }
@@ -45,6 +46,24 @@ export const GlobalStyles = createGlobalStyle`
 
     svg {
       stroke: var(--gray-400)
+    }
+  }
+
+  @keyframes FadeInBackground {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes NiceScale {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 `;

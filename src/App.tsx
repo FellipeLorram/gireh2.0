@@ -1,5 +1,4 @@
 import { Card } from "./Components/Card/Card";
-import { Text } from "./Components/Text/Text";
 import { GlobalStyles } from "./Styles/GlobalStyles";
 import { PageWrapper } from "./Widgets/PageWrapper/PageWrapper";
 
@@ -8,7 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <PageWrapper>
-        <Card.Wrapper>
+        <Card.Wrapper action={() => console.log("text")}>
           <Card.Row>
             <Card.Text>Nome</Card.Text>
             <Card.Text>Nome</Card.Text>

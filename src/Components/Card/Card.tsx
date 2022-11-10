@@ -6,9 +6,13 @@ interface CardProps {
   children: ReactNode;
 }
 
+interface CardWrapperProps extends CardProps {
+  action: () => void;
+}
+
 export const Card = {
-  Wrapper: ({ children }: CardProps) => {
-    return <CardWrapper>{children}</CardWrapper>;
+  Wrapper: ({ children, action }: CardWrapperProps) => {
+    return <CardWrapper onClick={action}>{children}</CardWrapper>;
   },
   Row: ({ children }: CardProps) => {
     return <Row>{children}</Row>;

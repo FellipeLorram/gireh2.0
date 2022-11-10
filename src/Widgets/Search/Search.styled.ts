@@ -50,13 +50,14 @@ export const SearchModalContainer = styled.div`
   background: rgba(0,0,0,0.7);
   transition: all .2s ease-in-out;
   z-index: 5;
-  animation: modalBackground .2s ease-in-out;
+  animation: FadeInBackground .2s ease-in-out;
 
   .modal {
     width: 90%;
     max-width: 400px;
     border-radius: var(--radius);
     background: var(--gray-700);
+    animation: NiceScale .2s ease-in-out;
 
     .header {
       width: 100%;
@@ -77,14 +78,6 @@ export const SearchModalContainer = styled.div`
     }
   }
 
-  @keyframes modalBackground {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0.7;
-    }
-  }
 `;
 
 export const SelectOptionContainer = styled.div<{ selected: boolean }>`
