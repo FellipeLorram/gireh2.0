@@ -43,20 +43,22 @@ export const SearchModal = () => {
   );
 
   return (
-    isModalOpen && (
-      <SearchModalContainer>
-        <div className="modal">
-          <div className="header">
-            <Icons.Close onClick={handleIconClick} />
-          </div>
+    <>
+      {isModalOpen && (
+        <SearchModalContainer>
+          <div className="modal">
+            <div className="header">
+              <Icons.Close onClick={handleIconClick} />
+            </div>
 
-          <div className="body">
-            {optionsArr.map((text) => (
-              <SelectOption text={text} key={text} />
-            ))}
+            <div className="body">
+              {optionsArr.map((text) => (
+                <SelectOption text={text} key={text} />
+              ))}
+            </div>
           </div>
-        </div>
-      </SearchModalContainer>
-    )
+        </SearchModalContainer>
+      )}
+    </>
   );
 };
