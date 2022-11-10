@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useCallback } from "react";
 import { Icons } from "../../Assets/Svgs/Icons/Index";
 import { Text } from "../../Components/Text/Text";
 import { useSearchContext } from "../../Store/SearchContext";
@@ -16,9 +16,15 @@ const optionsArr: options[] = ["Nome", "OS", "Data"];
 
 const SelectOption = memo(({ text }: SelectOptionProps) => {
   const [searchText, setSearchText] = useStore((state) => state.search);
+
+  const handleSelection = useCallback(
+    () => setSearchText({ search: text }),
+    [text]
+  );
+
   return (
     <SelectOptionContainer
-      onClick={() => setSearchText({ search: text })}
+      onClick={handleSelection}
       selected={searchText === text}
     >
       <Text className="text" size="m">
@@ -31,12 +37,17 @@ const SelectOption = memo(({ text }: SelectOptionProps) => {
 export const SearchModal = () => {
   const [isModalOpen, setIsModalOpen] = useStore((state) => state.open);
 
+  const handleIconClick = useCallback(
+    () => setIsModalOpen({ open: false }),
+    []
+  );
+
   return (
     isModalOpen && (
       <SearchModalContainer>
         <div className="modal">
           <div className="header">
-            <Icons.Close onClick={() => setIsModalOpen({ open: false })} />
+            <Icons.Close onClick={handleIconClick} />
           </div>
 
           <div className="body">
@@ -48,4 +59,4 @@ export const SearchModal = () => {
       </SearchModalContainer>
     )
   );
-}
+};

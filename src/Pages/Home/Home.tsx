@@ -1,6 +1,5 @@
-import React from "react";
+import { PageWrapper } from "../../Widgets/PageWrapper/PageWrapper";
 
 export const Home = () => {
-  return <div>Home</div>;
+  return <PageWrapper>Home</PageWrapper>;
 };
-

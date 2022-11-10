@@ -1,3 +1,5 @@
+import { Card } from "./Components/Card/Card";
+import { Text } from "./Components/Text/Text";
 import { GlobalStyles } from "./Styles/GlobalStyles";
 import { PageWrapper } from "./Widgets/PageWrapper/PageWrapper";
 
@@ -6,7 +8,12 @@ function App() {
     <>
       <GlobalStyles />
       <PageWrapper>
-        teste
+        <Card.Wrapper>
+          <Card.Row>
+            <Card.Text>Nome</Card.Text>
+            <Card.Text>Nome</Card.Text>
+          </Card.Row>
+        </Card.Wrapper>
       </PageWrapper>
     </>
   );

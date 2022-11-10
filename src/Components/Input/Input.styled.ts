@@ -16,6 +16,7 @@ export const InputWrapper = styled.div`
   padding: 0 10px;
   border: 2px solid transparent;
   transition: all .2s ease-in-out;
+  gap: 10px;
 
   :hover, :has(input:focus) {
     border-color: var(--main-color);

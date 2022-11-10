@@ -25,6 +25,11 @@ export const PageWrapperContainer = styled.section`
   }
 
   main {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     align-self: stretch;
   }
 `;
